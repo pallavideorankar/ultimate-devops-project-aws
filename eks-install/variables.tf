@@ -1,7 +1,7 @@
 variable "region" {
   description = "AWS region"
   type        = string
-  default     = "us-west-2"
+  default     = "eu-west-2"
 }
 
 variable "vpc_cidr" {
@@ -13,7 +13,7 @@ variable "vpc_cidr" {
 variable "availability_zones" {
   description = "Availability zones"
   type        = list(string)
-  default     = ["us-west-2a", "us-west-2b", "us-west-2c"]
+  default     = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
 }
 
 variable "private_subnet_cidrs" {
@@ -53,7 +53,7 @@ variable "node_groups" {
   }))
   default = {
     general = {
-      instance_types = ["t3.medium"]
+      instance_types = ["t2.medium"]
       capacity_type  = "ON_DEMAND"
       scaling_config = {
         desired_size = 2
